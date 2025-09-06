@@ -6,4 +6,3 @@ class User(SQLAlchemyBaseUserTableUUID, Base):
     __tablename__ = "users"
 
     name: Mapped[str] = mapped_column(nullable=False)
-
