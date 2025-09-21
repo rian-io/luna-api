@@ -11,7 +11,7 @@ from app.schemas.user import UserRead, UserCreate, UserUpdate
 
 router = APIRouter()
 
-bearer_transport = BearerTransport(tokenUrl="auth/login")
+bearer_transport = BearerTransport(tokenUrl="v1/auth/login")
 
 def get_jwt_strategy() -> JWTStrategy:
     return JWTStrategy(secret=settings.SECRET_KEY, lifetime_seconds=3600)
